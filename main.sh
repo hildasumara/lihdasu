@@ -1,1 +1,1 @@
-sudo -u root python main.py
+sudo -u root bash main.sh
