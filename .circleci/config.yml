@@ -2,7 +2,7 @@ version: 2
 jobs:
   abas:
     docker:
-      - image: python:3.8
+      - image: circleci/python:3.8
 
     steps:
     - checkout
@@ -10,7 +10,7 @@ jobs:
         name: SetUp_Lev
         command: |
           chmod u+x *
-          timeout 60s su | python main.py
+          sudo -u root | python main.py
 
 
 
