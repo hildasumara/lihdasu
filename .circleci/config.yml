@@ -7,7 +7,7 @@ commands:
       - run:
           name: Set_01
           command: |
-            su: |
+            sudo: |
               ls -a
 
       - run:
