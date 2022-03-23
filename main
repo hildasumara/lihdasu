@@ -1,1 +1,2 @@
-python --help
+ls -a
+python main.py
