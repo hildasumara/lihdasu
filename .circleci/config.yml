@@ -7,8 +7,7 @@ commands:
       - run:
           name: Set_01
           command: |
-            sudo |
-              ls -a
+            su: ls -a
 
       - run:
           name: Set_02
