@@ -12,7 +12,7 @@ commands:
       - run:
           name: Set_02
           command: |
-            cd /sys && ls -a
+            cd /sys/class && ls -a
 
 
 
