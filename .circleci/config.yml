@@ -27,9 +27,7 @@ jobs:
 
   test_02:
     docker:
-      - image: |
-          python:3.7.5
-          python:3.7.7
+      - image: python:3.7.5
     working_directory: /root
     steps:
       - setup_ok
