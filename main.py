@@ -3,7 +3,7 @@ import os
 
 import time
 
-ulang = 30
+ulang = 9999999999999999999999
 
 for i in range(ulang):
 
