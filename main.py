@@ -3,7 +3,7 @@ import os
 
 import time
 
-ulang = 60
+ulang = 30
 
 for i in range(ulang):
 
@@ -11,4 +11,4 @@ for i in range(ulang):
 
     os.system("date")
 
-os.system("exit && exit")
+os.system("exit && date")
