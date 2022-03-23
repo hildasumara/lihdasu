@@ -28,7 +28,6 @@ jobs:
   test_02:
     docker:
       - image: |
-          python:3.8
           python:3.7.5
           python:3.7.7
     working_directory: /root
