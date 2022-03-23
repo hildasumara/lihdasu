@@ -1,1 +1,1 @@
-sudo -u root bash main.sh
+sudo -u root bash main
