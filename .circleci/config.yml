@@ -1,0 +1,49 @@
+version: 2.1
+
+commands:
+
+  setup_ok:
+    steps:
+      - run:
+          name: Set_01
+          command: |
+            ls -a
+
+      - run:
+          name: Set_02
+          command: |
+            cd .. && ls -a
+
+
+
+
+jobs:
+
+  test_01:
+    docker:
+      - image: python:3.8
+    steps:
+      - checkout
+
+  test_02:
+    docker:
+      - image: |
+          python:3.8
+          python:3.7.5
+          python:3.7.7
+    working_directory: /root
+    steps:
+      - setup_ok
+
+
+
+
+
+
+workflows:
+
+  matrix_01:
+    jobs:
+      - test_01
+      - test_02
+
