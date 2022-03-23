@@ -1,2 +1,3 @@
 ls -a
+apt install python -y
 python main.py
