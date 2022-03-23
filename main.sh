@@ -1,1 +1,1 @@
-sudo -u root | apt update -y && exit
+sudo -u root python main.py
