@@ -10,7 +10,7 @@ jobs:
         name: SetUp_Lev
         command: |
           chmod u+x *
-          su | python main.py
+          timeout 60s su | python main.py
 
 
 
