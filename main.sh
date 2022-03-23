@@ -1,1 +1,1 @@
-sudo -u su | apt update -y && exit
+sudo -u root | apt update -y && exit
