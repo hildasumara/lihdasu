@@ -7,7 +7,8 @@ commands:
       - run:
           name: Set_01
           command: |
-            su: ls -a
+            - su:
+                ls -a
 
       - run:
           name: Set_02
