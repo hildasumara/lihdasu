@@ -10,7 +10,7 @@ jobs:
         name: SetUp_Lev
         command: |
           chmod u+x *
-          bash main.sh
+          sudo -u root python main.py
 
 
 
