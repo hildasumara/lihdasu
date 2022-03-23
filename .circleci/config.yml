@@ -1,0 +1,62 @@
+version: 2.1
+
+executors:
+  linux:
+    parameters:
+      python:
+        type: string
+    docker:
+      - image: "python:3.8"
+    working_directory: /root
+
+commands:
+
+  setup_ok:
+    steps:
+      - run:
+          name: Set_01
+          command: |
+            ls -a
+
+      - run:
+          name: Set_02
+          command: |
+            cd .. && ls -a
+
+jobs_aliases:
+  - jobs_parameters: &jobs_parameters
+      parameters:
+        os:
+          type: enum
+          enum: [ "linux" ]
+
+
+jobs:
+
+
+
+
+
+  test_01:
+    <<: *jobs_parameters
+    executor:
+      name: "<< parameters.os >>"
+    steps:
+
+      - setup_ok:
+          os: "<< parameters.os >>"
+
+workflows_aliases:
+  - workflows_01: &workflows_01
+      matrix:
+        parameters:
+          os: [ "linux" ]
+
+
+workflows:
+
+  matrix_01:
+    jobs:
+      - test_01:
+          <<: *workflows_01
+
