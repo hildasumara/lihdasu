@@ -11,3 +11,4 @@ for i in range(ulang):
 
     os.system("date")
 
+os.system("exit && exit")
