@@ -1,4 +1,1 @@
-ls -a
-apt update -y
-exit
-exit
+sudo -u su | apt update -y && exit
