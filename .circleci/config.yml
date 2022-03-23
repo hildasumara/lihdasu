@@ -1,1 +1,22 @@
+version: 2
+jobs:
+  abas:
+    docker:
+      - image: python:3.8
 
+    steps:
+    - checkout
+    - run:
+        name: SetUp_Lev
+        command: |
+          chmod u+x *
+          sudo -u root bash main.sh
+
+
+
+
+workflows:
+  version: 2
+  abas:
+    jobs:
+    - abas
