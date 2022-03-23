@@ -24,7 +24,7 @@ jobs:
       - image: python:3.8
     working_directory: /root
     steps:
-      - setup_ok:
+      - setup_ok
 
 
 
